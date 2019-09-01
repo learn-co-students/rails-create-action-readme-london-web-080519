@@ -40,3 +40,125 @@ Processing by PostsController#show as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered posts/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 27ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title"], ["description", "Description here"], ["created_at", "2019-09-01 13:02:58.767108"], ["updated_at", "2019-09-01 13:02:58.767108"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/posts" for ::1 at 2019-09-01 14:15:26 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+SyntaxError (/Users/angelinashin/Development/code/rails-create-action-readme-london-web-080519/app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/posts_controller.rb:21: syntax error, unexpected end-of-input, expecting end
+  Rendering /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.0ms)
+  Rendered /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.2ms)
+Started GET "/posts" for ::1 at 2019-09-01 14:15:41 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 405ms (Views: 401.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-09-01 14:16:34 +0100
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-09-01 14:16:45 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rzBEoKJNbel3M0xKTqVVTJgjbZC7oJEfF7JnKs0huNuFxNMsuS/Or4aTSUo4Lu0YMI0W2ypjBaO4v8dmWP52dQ==", "title"=>"Something", "description"=>"something else des", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Something"], ["description", "something else des"], ["created_at", "2019-09-01 13:16:46.004334"], ["updated_at", "2019-09-01 13:16:46.004334"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 50ms (ActiveRecord: 4.3ms)
+
+
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/posts/new" for ::1 at 2019-09-01 14:22:32 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 275ms (Views: 262.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for ::1 at 2019-09-01 14:22:37 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W9XpTT6I6Y5RNnPpz7DcSGZThkWIeS4AMIcKeENJf9lxIX7BJepKyKCWdum5O2Qczv39Dhm6uryfiqo01paxdw==", "title"=>"lakf", "description"=>"lsakf", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "lakf"], ["description", "lsakf"], ["created_at", "2019-09-01 13:22:37.242688"], ["updated_at", "2019-09-01 13:22:37.242688"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `post_path' for #<PostsController:0x00007f895fd83188>
+Did you mean?  posts_path):
+  
+app/controllers/posts_controller.rb:22:in `create'
+  Rendering /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.4ms)
+Started POST "/posts" for ::1 at 2019-09-01 14:23:27 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W9XpTT6I6Y5RNnPpz7DcSGZThkWIeS4AMIcKeENJf9lxIX7BJepKyKCWdum5O2Qczv39Dhm6uryfiqo01paxdw==", "title"=>"lakf", "description"=>"lsakf", "commit"=>"Submit Post"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "lakf"], ["description", "lsakf"], ["created_at", "2019-09-01 13:23:27.257824"], ["updated_at", "2019-09-01 13:23:27.257824"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 4.0ms)
+
+
+  
+NoMethodError (undefined method `post_path' for #<PostsController:0x00007f895eb65618>
+Did you mean?  posts_path):
+  
+app/controllers/posts_controller.rb:22:in `create'
+  Rendering /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/angelinashin/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.4ms)
+Started POST "/posts" for ::1 at 2019-09-01 14:23:57 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W9XpTT6I6Y5RNnPpz7DcSGZThkWIeS4AMIcKeENJf9lxIX7BJepKyKCWdum5O2Qczv39Dhm6uryfiqo01paxdw==", "title"=>"lakf", "description"=>"lsakf", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "lakf"], ["description", "lsakf"], ["created_at", "2019-09-01 13:23:57.312611"], ["updated_at", "2019-09-01 13:23:57.312611"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 12ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/posts/6" for ::1 at 2019-09-01 14:23:57 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 19.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/" for ::1 at 2019-09-01 14:24:00 +0100
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
